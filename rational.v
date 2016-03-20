@@ -52,4 +52,4 @@ Definition eq_rational (x y : rational) : Prop :=
 (* does 1/2 = 2/4? *)
 Example twoFourthsIsOneHalf: (eq_rational {| direction := pos; numerator := 1; denominator := 1 |}
                                           {| direction := pos; numerator := 2; denominator := 3 |}).
-Proof. simpl. reflexivity. Qed.
+Proof. simpl. constructor. reflexivity. constructor. reflexivity. reflexivity. Qed.
